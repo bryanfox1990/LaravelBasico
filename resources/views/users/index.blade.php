@@ -1,7 +1,6 @@
-@include('header')
+@extends('layout')
 
-<div class="row mt-3">
-  <div class="col-8">
+@section('content')
     <h2>{{ $titulo }}</h2>
 
     @if(!empty($equipo))
@@ -15,12 +14,10 @@
     <p>No hay usuario registrado.</p>
     @endif
     </ul>
-  </div>
-  <div class="col-4">
- @include('sidebar')
-  </div>
-
-</div>
+@endsection
 
 
-@include('footer')
+@section('slider')
+@parent
+<h2>Barra Lateral Personalizada</h2>
+@endsection

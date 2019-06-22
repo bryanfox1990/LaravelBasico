@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Sticky Footer Navbar Template for Bootstrap</title>
+    <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -48,7 +48,18 @@
 
 <main role="main" class="container">
 
-  @yield('content')
+  <div class="row mt-3">
+    <div class="col-8">
+        @yield('content')
+    </div>
+    <div class="col-4">
+        @section('slider')
+        <h2>Barra Lateral</h2>
+        @show
+    </div>
+
+  </div>
+
 
 </main>
 

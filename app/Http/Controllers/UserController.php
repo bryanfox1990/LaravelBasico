@@ -28,12 +28,12 @@ class UserController extends Controller
         ->with('equipo',$equipo)
         ->with('titulo','Listado de Usuarios.!!!');
         */
-        return view('users',compact('equipo','titulo'));
+        return view('users.index',compact('equipo','titulo'));
     }
 
     public function show($id)
     {
-      return view('user-show',compact('id'));
+      return view('users.show',compact('id'));
       //  return "Mostrando detalle del usuario: {$id}";
     }
 
